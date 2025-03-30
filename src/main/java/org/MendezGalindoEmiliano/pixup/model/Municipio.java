@@ -98,7 +98,7 @@ public class Municipio implements SolicitaDatos {
         System.out.println("Seleccione el estado para el municipio:");
         ArrayList<Estado> estados = Estado.getLista();
         for (int i = 0; i < estados.size(); i++) {
-            System.out.println((i + 1) + ".- " + estados.get(i).getId() + " " + estados.get(i).getNombre());
+            System.out.println((i + 1) + estados.get(i).getNombre() + " ID: " + estados.get(i).getId());
         }
 
         int opc = ReadUtil.getInstance().leerInt();
@@ -179,7 +179,7 @@ public class Municipio implements SolicitaDatos {
                 System.out.print("Ingrese el numero del estado: ");
                 ArrayList<Estado> estados = Estado.getLista();
                 for (int i = 0; i < estados.size(); i++) {
-                    System.out.println((i + 1) + ". " + estados.get(i).getNombre());
+                    System.out.println((i + 1) + ". " + estados.get(i).getNombre() + " ID: " + estados.get(i).getId());
                 }
 
                 int opc = ReadUtil.getInstance().leerInt();
@@ -205,7 +205,7 @@ public class Municipio implements SolicitaDatos {
             for (Municipio municipio : lista) {
                 System.out.println("Id: " + municipio.getId());
                 System.out.println("Municipio: " + municipio.getNombre());
-                System.out.println("Estado al que pertenece: " + municipio.getEstado().getId() + "  " + municipio.getEstado().getNombre());
+                System.out.println("Estado al que pertenece: " + municipio.getEstado().getNombre() + " ID: " + municipio.getEstado().getId());
                 System.out.println("--------------------------------");
             }
         }

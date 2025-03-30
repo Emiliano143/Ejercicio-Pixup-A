@@ -1,8 +1,6 @@
 package org.MendezGalindoEmiliano.pixup.vista;
 
-import org.MendezGalindoEmiliano.pixup.model.Colonia;
-import org.MendezGalindoEmiliano.pixup.model.Estado;
-import org.MendezGalindoEmiliano.pixup.model.Municipio;
+import org.MendezGalindoEmiliano.pixup.model.*;
 import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 
 public class Consola implements Ejecutable {
@@ -46,8 +44,26 @@ public class Consola implements Ejecutable {
                                 colonia.leerDatos();
                                 break;
                             case 4:
+                                Domicilio domicilio = new Domicilio();
+                                domicilio.leerDatos();
                                 break;
                             case 5:
+                                TipoDomicilio tipoDomicilio = new TipoDomicilio();
+                                tipoDomicilio.leerDatos();
+                                break;
+                            case 6:
+                                Usuario usuario = new Usuario();
+                                usuario.leerDatos();
+                                break;
+                            case 7:
+                                Notificacion notificacion = new Notificacion();
+                                notificacion.leerDatos();
+                                break;
+                            case 8:
+                                TipoNotificacion tipoNotificacion = new TipoNotificacion();
+                                tipoNotificacion.leerDatos();
+                                break;
+                            case 9:
                                 flag2 = false;
                                 break;
                             default:

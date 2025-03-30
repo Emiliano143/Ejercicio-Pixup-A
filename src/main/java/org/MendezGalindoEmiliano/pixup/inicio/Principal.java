@@ -4,6 +4,7 @@ import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 import org.MendezGalindoEmiliano.pixup.vista.Consola;
 import org.MendezGalindoEmiliano.pixup.vista.Ejecutable;
 import org.MendezGalindoEmiliano.pixup.vista.Menu;
+import org.MendezGalindoEmiliano.pixup.vista.Ventana;
 
 public class Principal {
     public Principal() {
@@ -24,7 +25,7 @@ public class Principal {
                     ejecutable = Consola.getInstance( );
                     break;
                 case 2:
-
+                    ejecutable = Ventana.getInstance( );
                     break;
                 case 3:
                     flag = false;

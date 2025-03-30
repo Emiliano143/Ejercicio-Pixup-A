@@ -44,7 +44,58 @@ public class Menu {
         System.out.println("Escoge el dato que deseas cambiar");
         System.out.println("1.- Id");
         System.out.println("2.- Nombre");
-        System.out.println("3.- Esetado al que pertenece");
+        System.out.println("3.- Estado al que pertenece");
+    }
+
+    public static void cambio4(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Nombre");
+        System.out.println("3.- Codigo postal");
+        System.out.println("4.- Municipio al que pertenece");
+    }
+
+    public static void cambio5(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Calle");
+        System.out.println("3.- Numero interior");
+        System.out.println("4.- Numero exterior");
+        System.out.println("5.- Usuario relacionado");
+        System.out.println("6.- Colonia relacionada");
+        System.out.println("7.- Tipo de deomicilio relacionado");
+    }
+
+    public static void cambio6(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Descripcion");
+    }
+
+    public static void cambio7(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Nombre");
+        System.out.println("3.- Primer apellido");
+        System.out.println("4.- Seguno apellido");
+        System.out.println("5.- Contrasena");
+        System.out.println("6.- Email");
+        System.out.println("7.- RFC");
+    }
+
+    public static void cambio8(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Fecha de notificacion");
+        System.out.println("3.- Usuario relacionado");
+        System.out.println("4.- Tipo de notificacion relacionada");
+    }
+
+    public static void cambio9(){
+        System.out.println("Escoge el dato que deseas cambiar");
+        System.out.println("1.- Id");
+        System.out.println("2.- Descripcion");
+        System.out.println("3.- Ruta");
     }
 
     public static void id(){
@@ -71,11 +122,18 @@ public class Menu {
         System.out.println("Ingresa los datos de la colonia ");
     }
 
+    public static void domicilio(){
+        System.out.println("Ingresa los datos del domicilio ");
+    }
+
+    public static void notificacion(){
+        System.out.println("Ingresa los datos de la notificacion ");
+    }
+
     public static void opcionInvalida( )
     {
         System.out.println( "Opcion invalida");
     }
-
 
     public static void  cambio(){
         System.out.println("Ingresa el nuevo dato");
@@ -115,6 +173,34 @@ public class Menu {
 
     public static void  numInt(){
         System.out.println("Ingresa el numero interior");
+    }
+
+    public static void  apellido1(){
+        System.out.println("Ingresa el primer apellido");
+    }
+
+    public static void  apellido2(){
+        System.out.println("Ingresa el segundo apellido");
+    }
+
+    public static void  contra(){
+        System.out.println("Ingresa una contrasena");
+    }
+
+    public static void  email(){
+        System.out.println("Ingresa un email");
+    }
+
+    public static void  rfc(){
+        System.out.println("Ingresa un RFC");
+    }
+
+    public static void  ruta(){
+        System.out.println("Ingresa un ruta");
+    }
+
+    public static void fecha(){
+        System.out.println("Ingresa la fecha  ");
     }
 
 }
