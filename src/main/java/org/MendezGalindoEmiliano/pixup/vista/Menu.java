@@ -11,7 +11,12 @@ public class Menu {
         System.out.println("1.- Estado");
         System.out.println("2.- Municipio");
         System.out.println("3.- Colonia");
-        System.out.println("5.- Salir");
+        System.out.println("4.- Domicilio");
+        System.out.println("5.- TipoDomiclio");
+        System.out.println("6.- Usuario");
+        System.out.println("7.- Notificacion");
+        System.out.println("8.- TipoNotificacion");
+        System.out.println("9- Salir");
     }
 
     public static void principal4(){
@@ -51,8 +56,8 @@ public class Menu {
         System.out.println("Escoge el dato que deseas cambiar");
         System.out.println("1.- Id");
         System.out.println("2.- Nombre");
-        System.out.println("3.- Codigo postal");
-        System.out.println("4.- Municipio al que pertenece");
+        System.out.println("3.- Municipio al que pertenece");
+        System.out.println("4.- Codigo postal");
     }
 
     public static void cambio5(){
@@ -202,5 +207,4 @@ public class Menu {
     public static void fecha(){
         System.out.println("Ingresa la fecha  ");
     }
-
 }

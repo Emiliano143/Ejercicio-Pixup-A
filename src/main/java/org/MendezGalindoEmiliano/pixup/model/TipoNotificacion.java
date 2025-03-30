@@ -3,7 +3,6 @@ package org.MendezGalindoEmiliano.pixup.model;
 import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 import org.MendezGalindoEmiliano.pixup.vista.Menu;
 import org.MendezGalindoEmiliano.pixup.vista.SolicitaDatos;
-
 import java.util.ArrayList;
 
 public class TipoNotificacion implements SolicitaDatos {

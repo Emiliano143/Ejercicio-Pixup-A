@@ -19,7 +19,8 @@ public class Usuario implements SolicitaDatos {
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nombre, String primerApellido, String segundoApellido, String contrasena, String email, String rfc) {
+    public Usuario(Integer id, String nombre, String primerApellido, String segundoApellido,
+                   String contrasena, String email, String rfc) {
         this.id = id;
         this.nombre = nombre;
         this.primerApellido = primerApellido;
@@ -140,7 +141,8 @@ public class Usuario implements SolicitaDatos {
         Menu.rfc();
         String nuevoRfc = ReadUtil.getInstance().leer();
 
-        Usuario nuevoUsuario = new Usuario(nuevoId, nuevoNombre, nuevoApellido1, nuevoApellido2, nuevaContrasena, nuevoEmail, nuevoRfc);
+        Usuario nuevoUsuario = new Usuario(nuevoId, nuevoNombre, nuevoApellido1, nuevoApellido2,
+                nuevaContrasena, nuevoEmail, nuevoRfc);
         agregarUsuario(nuevoUsuario);
         Menu.alta1();
     }

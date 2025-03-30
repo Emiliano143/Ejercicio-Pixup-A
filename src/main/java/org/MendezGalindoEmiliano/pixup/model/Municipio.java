@@ -3,7 +3,6 @@ package org.MendezGalindoEmiliano.pixup.model;
 import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 import org.MendezGalindoEmiliano.pixup.vista.Menu;
 import org.MendezGalindoEmiliano.pixup.vista.SolicitaDatos;
-
 import java.util.ArrayList;
 
 public class Municipio implements SolicitaDatos {
@@ -179,7 +178,8 @@ public class Municipio implements SolicitaDatos {
                 System.out.print("Ingrese el numero del estado: ");
                 ArrayList<Estado> estados = Estado.getLista();
                 for (int i = 0; i < estados.size(); i++) {
-                    System.out.println((i + 1) + ". " + estados.get(i).getNombre() + " ID: " + estados.get(i).getId());
+                    System.out.println((i + 1) + ". " + estados.get(i).getNombre()
+                            + " ID: " + estados.get(i).getId());
                 }
 
                 int opc = ReadUtil.getInstance().leerInt();
@@ -205,7 +205,8 @@ public class Municipio implements SolicitaDatos {
             for (Municipio municipio : lista) {
                 System.out.println("Id: " + municipio.getId());
                 System.out.println("Municipio: " + municipio.getNombre());
-                System.out.println("Estado al que pertenece: " + municipio.getEstado().getNombre() + " ID: " + municipio.getEstado().getId());
+                System.out.println("Estado al que pertenece: " + municipio.getEstado().getNombre()
+                        + " ID: " + municipio.getEstado().getId());
                 System.out.println("--------------------------------");
             }
         }

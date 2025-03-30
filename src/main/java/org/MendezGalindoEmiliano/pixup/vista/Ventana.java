@@ -182,8 +182,10 @@ public class Ventana extends JFrame implements Ejecutable {
     private void ejecutarAccion() {
         // Opciones CRUD disponibles
         String[] opcionesCRUD = {"Alta", "Baja", "Cambio", "Ver"};
-        int seleccion = JOptionPane.showOptionDialog(this, "Seleccione una opción CRUD", "Operación CRUD",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcionesCRUD, opcionesCRUD[0]);
+        int seleccion = JOptionPane.showOptionDialog(this,
+                "Seleccione una opción CRUD", "Operación CRUD",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null, opcionesCRUD, opcionesCRUD[0]);
 
         switch (seleccion) {
             case 0: // Alta
@@ -199,7 +201,8 @@ public class Ventana extends JFrame implements Ejecutable {
 
             case 1: // Baja
                 if (!datos.isEmpty()) {
-                    String idEliminar = JOptionPane.showInputDialog(this, "Ingrese el ID a eliminar:");
+                    String idEliminar = JOptionPane.showInputDialog(this,
+                            "Ingrese el ID a eliminar:");
                     boolean eliminado = datos.removeIf(dato -> dato[0].equals(idEliminar));
                     if (eliminado) {
                         JOptionPane.showMessageDialog(this, "Datos eliminados correctamente.");
@@ -213,7 +216,8 @@ public class Ventana extends JFrame implements Ejecutable {
 
             case 2: // Cambio
                 if (!datos.isEmpty()) {
-                    String idModificar = JOptionPane.showInputDialog(this, "Ingrese el ID a modificar:");
+                    String idModificar = JOptionPane.showInputDialog(this,
+                            "Ingrese el ID a modificar:");
                     for (String[] dato : datos) {
                         if (dato[0].equals(idModificar)) {
                             for (int i = 0; i < labels.length; i++) {
@@ -225,7 +229,8 @@ public class Ventana extends JFrame implements Ejecutable {
                                     }
                                 }
                             }
-                            JOptionPane.showMessageDialog(this, "Datos modificados correctamente.");
+                            JOptionPane.showMessageDialog(this,
+                                    "Datos modificados correctamente.");
                             return;
                         }
                     }

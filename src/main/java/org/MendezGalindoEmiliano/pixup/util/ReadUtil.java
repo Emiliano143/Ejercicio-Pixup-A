@@ -7,8 +7,7 @@ public class ReadUtil
     private Scanner scanner;
     private static ReadUtil readUtil;
 
-    private ReadUtil()
-    {
+    private ReadUtil()  {
     }
 
     public static ReadUtil getInstance( )

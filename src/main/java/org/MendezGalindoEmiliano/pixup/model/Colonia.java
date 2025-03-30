@@ -110,7 +110,8 @@ public class Colonia implements SolicitaDatos {
         System.out.println("Seleccione el municipio para la colonia:");
         ArrayList<Municipio> municipios = Municipio.getLista();
         for (int i = 0; i < municipios.size(); i++) {
-            System.out.println((i + 1) + ". " + municipios.get(i).getNombre() + " ID: " + municipios.get(i).getId());
+            System.out.println((i + 1) + ". " + municipios.get(i).getNombre() + " ID: "
+                    + municipios.get(i).getId());
         }
 
         int opc = ReadUtil.getInstance().leerInt();
@@ -191,7 +192,8 @@ public class Colonia implements SolicitaDatos {
                 System.out.print("Seleccione el nuevo municipio: ");
                 ArrayList<Municipio> municipios = Municipio.getLista();
                 for (int i = 0; i < municipios.size(); i++) {
-                    System.out.println((i + 1) + ". " + municipios.get(i).getNombre() + " ID: " + municipios.get(i).getId());
+                    System.out.println((i + 1) + ". " + municipios.get(i).getNombre() + " ID: "
+                            + municipios.get(i).getId());
                 }
 
                 int opc = ReadUtil.getInstance().leerInt();
@@ -224,7 +226,8 @@ public class Colonia implements SolicitaDatos {
                 System.out.println("Id: " + colonia.getId());
                 System.out.println("Colonia: " + colonia.getNombre());
                 System.out.println("Codigo Postal: " + colonia.getCp());
-                System.out.println("Municipio al que pertenece: " + colonia.getMunicipio().getNombre() + " ID: " + colonia.getMunicipio().getId());
+                System.out.println("Municipio al que pertenece: " + colonia.getMunicipio().getNombre()
+                        + " ID: " + colonia.getMunicipio().getId());
                 System.out.println("--------------------------------");
             }
         }

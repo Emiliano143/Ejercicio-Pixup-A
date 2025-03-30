@@ -3,7 +3,6 @@ package org.MendezGalindoEmiliano.pixup.model;
 import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 import org.MendezGalindoEmiliano.pixup.vista.Menu;
 import org.MendezGalindoEmiliano.pixup.vista.SolicitaDatos;
-
 import java.util.ArrayList;
 
 public class Notificacion implements SolicitaDatos {
@@ -16,7 +15,8 @@ public class Notificacion implements SolicitaDatos {
     public Notificacion() {
     }
 
-    public Notificacion(Integer id, String fechaNotificacion, Usuario usuario, TipoNotificacion tipoNotificacion) {
+    public Notificacion(Integer id, String fechaNotificacion, Usuario usuario,
+                        TipoNotificacion tipoNotificacion) {
         this.id = id;
         this.fechaNotificacion = fechaNotificacion;
         this.usuario = usuario;
@@ -129,7 +129,8 @@ public class Notificacion implements SolicitaDatos {
         }
         TipoNotificacion tipoNotificacionSeleccionado = tipos.get(tipoOpc - 1);
 
-        Notificacion nuevaNotificacion = new Notificacion(nuevoId, nuevaFechaNotificacion, usuarioSeleccionado, tipoNotificacionSeleccionado);
+        Notificacion nuevaNotificacion = new Notificacion(nuevoId, nuevaFechaNotificacion,
+                usuarioSeleccionado, tipoNotificacionSeleccionado);
         agregarNotificacion(nuevaNotificacion);
         Menu.alta1();
     }
@@ -211,8 +212,10 @@ public class Notificacion implements SolicitaDatos {
             for (Notificacion notificacion : lista) {
                 System.out.println("Id: " + notificacion.getId());
                 System.out.println("Fecha de Notificacion: " + notificacion.getFechaNotificacion());
-                System.out.println("Usuario: " + notificacion.getUsuario().getNombre() + " ID: " + notificacion.getUsuario().getId());
-                System.out.println("Tipo de Notificacion: " + " ID: " + notificacion.getTipoNotificacion().getId());
+                System.out.println("Usuario: " + notificacion.getUsuario().getNombre()
+                        + " ID: " + notificacion.getUsuario().getId());
+                System.out.println("Tipo de Notificacion: " + " ID: "
+                        + notificacion.getTipoNotificacion().getId());
                 System.out.println("--------------------------------");
             }
         }

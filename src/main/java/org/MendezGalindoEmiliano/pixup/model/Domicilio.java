@@ -3,7 +3,6 @@ package org.MendezGalindoEmiliano.pixup.model;
 import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 import org.MendezGalindoEmiliano.pixup.vista.Menu;
 import org.MendezGalindoEmiliano.pixup.vista.SolicitaDatos;
-
 import java.util.ArrayList;
 
 public class Domicilio implements SolicitaDatos {
@@ -19,7 +18,8 @@ public class Domicilio implements SolicitaDatos {
     public Domicilio() {
     }
 
-    public Domicilio(Integer id, Usuario usuario, Colonia colonia, TipoDomicilio tipoDomicilio, String numeroExt, String numeroInt, String calle) {
+    public Domicilio(Integer id, Usuario usuario, Colonia colonia, TipoDomicilio tipoDomicilio,
+                     String numeroExt, String numeroInt, String calle) {
         this.id = id;
         this.usuario = usuario;
         this.colonia = colonia;
@@ -125,7 +125,8 @@ public class Domicilio implements SolicitaDatos {
     }
 
     public void altaDomicilio() {
-        if (Usuario.getLista().isEmpty() || Colonia.getLista().isEmpty() || TipoDomicilio.getLista().isEmpty()) {
+        if (Usuario.getLista().isEmpty() || Colonia.getLista().isEmpty() ||
+                TipoDomicilio.getLista().isEmpty()) {
             Menu.noDatos();
             return;
         }
@@ -142,7 +143,8 @@ public class Domicilio implements SolicitaDatos {
         System.out.println("Seleccione el usuario para el domicilio:");
         ArrayList<Usuario> usuarios = Usuario.getLista();
         for (int i = 0; i < usuarios.size(); i++) {
-            System.out.println((i + 1) + ". " + usuarios.get(i).getNombre() + "  ID: " + usuarios.get(i).getId());
+            System.out.println((i + 1) + ". " + usuarios.get(i).getNombre()
+                    + "  ID: " + usuarios.get(i).getId());
         }
         int usuarioOpc = ReadUtil.getInstance().leerInt();
         if (usuarioOpc < 1 || usuarioOpc > usuarios.size()) {
@@ -154,7 +156,8 @@ public class Domicilio implements SolicitaDatos {
         System.out.println("Seleccione la colonia para el domicilio:");
         ArrayList<Colonia> colonias = Colonia.getLista();
         for (int i = 0; i < colonias.size(); i++) {
-            System.out.println((i + 1) + ". " + colonias.get(i).getNombre() + "  ID: " + colonias.get(i).getId());
+            System.out.println((i + 1) + ". " + colonias.get(i).getNombre()
+                    + "  ID: " + colonias.get(i).getId());
         }
         int coloniaOpc = ReadUtil.getInstance().leerInt();
         if (coloniaOpc < 1 || coloniaOpc > colonias.size()) {
@@ -175,7 +178,9 @@ public class Domicilio implements SolicitaDatos {
         }
         TipoDomicilio tipoDomicilioSeleccionado = tipos.get(tipoOpc - 1);
 
-        Domicilio nuevoDomicilio = new Domicilio(nuevoId, usuarioSeleccionado, coloniaSeleccionada, tipoDomicilioSeleccionado, nuevoNumeroExt, nuevoNumeroInt, nuevaCalle);
+        Domicilio nuevoDomicilio = new Domicilio(nuevoId, usuarioSeleccionado,
+                coloniaSeleccionada, tipoDomicilioSeleccionado, nuevoNumeroExt,
+                nuevoNumeroInt, nuevaCalle);
         agregarDomicilio(nuevoDomicilio);
         Menu.alta1();
     }
@@ -271,9 +276,12 @@ public class Domicilio implements SolicitaDatos {
                 System.out.println("Calle: " + domicilio.getCalle());
                 System.out.println("Numero Exterior: " + domicilio.getNumeroExt());
                 System.out.println("Numero Interior: " + domicilio.getNumeroInt());
-                System.out.println("Usuario: " + domicilio.getUsuario().getNombre() + " ID: " + domicilio.getUsuario().getId());
-                System.out.println("Colonia: " + domicilio.getColonia().getNombre() + " ID: " + domicilio.getColonia().getId());
-                System.out.println("Tipo Domicilio: " + "  ID: " + domicilio.getTipoDomicilio().getId());
+                System.out.println("Usuario: " + domicilio.getUsuario().getNombre()
+                        + " ID: " + domicilio.getUsuario().getId());
+                System.out.println("Colonia: " + domicilio.getColonia().getNombre()
+                        + " ID: " + domicilio.getColonia().getId());
+                System.out.println("Tipo Domicilio: " + "  ID: "
+                        + domicilio.getTipoDomicilio().getId());
                 System.out.println("--------------------------------");
             }
         }

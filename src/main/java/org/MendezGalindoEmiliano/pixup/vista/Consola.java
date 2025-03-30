@@ -6,8 +6,7 @@ import org.MendezGalindoEmiliano.pixup.util.ReadUtil;
 public class Consola implements Ejecutable {
     private static Consola consola;
 
-    public Consola() {
-    }
+    public Consola() {}
 
     public static Consola getInstance(){
         if( consola == null )
