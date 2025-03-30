@@ -46,19 +46,5 @@ public class ReadUtil
         }
         return null;
     }
-
-    public static Integer string2Integer( String cadena )
-    {
-        try
-        {
-            return Integer.valueOf( cadena );
-        }
-        catch (NumberFormatException e)
-        {
-            System.out.println( "No es un entero");
-            System.out.println( "Ingresa un entero");
-        }
-        return null;
-    }
 }
 
